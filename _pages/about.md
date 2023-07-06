@@ -18,7 +18,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am a medical student at [Harvard Medical School](https://hms.harvard.edu/). I previously studied at [Stanford University](https://cs.stanford.edu/), where I received an MS in Computer Science (AI track) and bachelor’s degrees in Computer Science and Biology.
 
-My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to clinical deployment and validation of machine learning algorithms. I’ve spent time innovating new computational & biomedical tools at Stanford [ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA](https://www.nasa.gov/ames/spacescience-and-astrobiology), [Stanford Health Care](https://med.stanford.edu/gensurg.html), and [MIT](https://cheme.mit.edu/).
+My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to clinical deployment and validation of machine learning algorithms. I’ve spent time innovating new computational & biomedical tools at Stanford [ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA](https://www.nasa.gov/ames/spacescience-and-astrobiology), [Stanford Health Care](https://med.stanford.edu/gensurg.html), [MIT](https://cheme.mit.edu/), and [UCSF](https://bts.ucsf.edu/).
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
