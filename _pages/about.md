@@ -20,6 +20,8 @@ I am a medical student at [Harvard Medical School](https://hms.harvard.edu/). I 
 
 My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to clinical deployment and validation of machine learning algorithms. I’ve spent time innovating new computational & biomedical tools at Stanford [ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA](https://www.nasa.gov/ames/spacescience-and-astrobiology), [Stanford Health Care](https://med.stanford.edu/gensurg.html), [MIT](https://cheme.mit.edu/), and [UCSF](https://bts.ucsf.edu/).
 
+When not at the bench, computer, or hospital, I enjoy capturing and reflecting on our world's natural wonders through nature photography and poetry.
+
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
