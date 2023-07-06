@@ -13,11 +13,15 @@ profile:
     <p>123 your address street</p>
     <p>Your City, State 12345</p>
 
-news: true  # includes a list of news items
+news: false  # includes a list of news items
 latest_posts: true  # includes a list of the newest posts
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
+
+I am a medical student at Harvard Medical School. My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to clinical deployment and validation of machine learning algorithms.
+
+Prior to Harvard, I studied at Stanford University, where I received an MS in Computer Science (AI) and bachelors degrees in Computer Science and Biology. I've spent time innovating new clinical algorithms, therapeutics, and tools at Stanford ChEM-H & Bioengineering, NASA, Stanford Health Care, MIT, and UCSF.
 
 Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
