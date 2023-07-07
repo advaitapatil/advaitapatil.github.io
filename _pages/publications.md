@@ -7,7 +7,15 @@ nav: true
 nav_order: 1
 ---
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZNC5LYZYZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-JZNC5LYZYZ');
+</script>
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
