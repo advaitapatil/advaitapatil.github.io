@@ -57,3 +57,9 @@ nav_order: 1
         {% include figure.html path="assets/img/photography/ocean_bird.png" title="ocean_bird" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
+
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/photography/IMG_3723.png" title="song sparrow" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
