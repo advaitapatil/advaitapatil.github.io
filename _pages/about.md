@@ -22,6 +22,16 @@ My broad interests lie at the intersection of artificial intelligence and health
 
 When not at the bench, computer, or hospital, I enjoy capturing and reflecting on our world's natural wonders through nature photography and poetry.
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JZNC5LYZYZ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JZNC5LYZYZ');
+</script>
+
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
 
