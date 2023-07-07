@@ -28,7 +28,7 @@ nav_order: 1
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/photography/napa_tree.jpg" title="napa_tree" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/photography/napa_tree.png" title="napa_tree" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
@@ -44,7 +44,7 @@ nav_order: 1
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/photography/IMG_3454.jpg" title="pelican" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/photography/pelicans.png" title="pelican" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 
