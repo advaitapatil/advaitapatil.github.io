@@ -18,9 +18,9 @@ social: true  # includes social icons at the bottom of the page
 
 I am a medical student at [Harvard Medical School](https://hms.harvard.edu/). I previously studied at [Stanford University](https://cs.stanford.edu/), where I received an MS in Computer Science (AI track) and bachelor’s degrees in Computer Science and Biology.
 
-My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to clinical deployment and validation of machine learning algorithms. I’ve spent time innovating new computational & biomedical tools at Stanford [ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA](https://www.nasa.gov/ames/spacescience-and-astrobiology), [Stanford Health Care](https://med.stanford.edu/gensurg.html), [MIT](https://cheme.mit.edu/), and [UCSF](https://bts.ucsf.edu/).
+My broad interests lie at the intersection of artificial intelligence and healthcare, particularly with respect to development, clinical deployment, and evaluation of machine learning algorithms. I’ve spent time innovating new computational & biomedical systems at [Mass General Brigham](https://www.massgeneral.org/neurosurgery), Stanford [ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA](https://www.nasa.gov/space-science-and-astrobiology-at-ames/), [Stanford Health Care](https://med.stanford.edu/gensurg.html), [MIT](https://cheme.mit.edu/), and [UCSF](https://bts.ucsf.edu/).
 
-When not at the bench, computer, or hospital, I enjoy capturing and reflecting on our world's natural wonders through nature photography and poetry.
+When not at the bench, computer, or hospital, I enjoy capturing and reflecting on our world's natural wonders through [nature photography and poetry](http://naturephotopoetry.wordpress.com).
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-JZNC5LYZYZ"></script>
