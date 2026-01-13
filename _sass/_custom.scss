@@ -6,10 +6,10 @@
 // Neural Pulse Animation
 @keyframes synapticGlow {
   0%, 100% {
-    box-shadow: 0 0 0 rgba(10, 22, 40, 0);
+    box-shadow: 0 0 0 rgba(26, 26, 26, 0);
   }
   50% {
-    box-shadow: 0 0 20px rgba(10, 22, 40, 0.3);
+    box-shadow: 0 0 20px rgba(26, 26, 26, 0.3);
   }
 }
 
@@ -66,87 +66,12 @@
   }
 }
 
-// Neural pathway - ONLY on about page
-.about-page {
-  // Brain circuit image directly left of name
-  .post-title::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: -85px;
-    transform: translateY(-50%);
-    width: 58px;
-    height: 58px;
-    background-image: url('/assets/img/brain_circuit.jpg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    pointer-events: none;
-    opacity: 0.6;
-  }
-
-  // Neural pathway on left margin (5 neurons with equal length axons)
-  .post article {
-    position: relative;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: -3rem;
-      left: -70px;
-      width: 24px;
-      height: calc(100% + 3.5rem - 50px);
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 500' preserveAspectRatio='xMidYMin slice'%3E%3C!-- Connection line from top image --%3E%3Cpath d='M12 0 L12 25' stroke='%230A1628' stroke-width='1.5' stroke-linecap='round'/%3E%3C!-- Neuron 1 --%3E%3Cpath d='M6 32 L12 25' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 32 L12 25' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='42' r='4' fill='%230A1628'/%3E%3Cpath d='M12 46 L12 110' stroke='%230A1628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C!-- Neuron 2 --%3E%3Cpath d='M6 117 L12 110' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 117 L12 110' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='127' r='4' fill='%230A1628'/%3E%3Cpath d='M12 131 L12 195' stroke='%230A1628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C!-- Neuron 3 --%3E%3Cpath d='M6 202 L12 195' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 202 L12 195' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='212' r='4' fill='%230A1628'/%3E%3Cpath d='M12 216 L12 280' stroke='%230A1628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C!-- Neuron 4 --%3E%3Cpath d='M6 287 L12 280' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 287 L12 280' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='297' r='4' fill='%230A1628'/%3E%3Cpath d='M12 301 L12 365' stroke='%230A1628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C!-- Neuron 5 - final --%3E%3Cpath d='M6 372 L12 365' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M18 372 L12 365' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Ccircle cx='12' cy='382' r='4' fill='%230A1628'/%3E%3Cpath d='M12 386 L12 450' stroke='%230A1628' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3Cpath d='M12 450 L6 460' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3Cpath d='M12 450 L18 460' stroke='%230A1628' stroke-width='1.2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-      background-repeat: no-repeat;
-      background-size: 24px 500px;
-      background-position: top center;
-      pointer-events: none;
-      opacity: 0.5;
-    }
-  }
-
-  // Circuit image at bottom
-  .social {
-    position: relative;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      top: -60px;
-      left: -85px;
-      width: 55px;
-      height: 55px;
-      background-image: url('/assets/img/circuit.png');
-      background-repeat: no-repeat;
-      background-size: contain;
-      background-position: center;
-      pointer-events: none;
-      opacity: 0.6;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .about-page {
-    .post-title::before,
-    .post article::before,
-    .social::before {
-      display: none !important;
-    }
-  }
-}
-
-
 // Clean Navigation Styling
 .navbar {
-  background: rgba(248, 250, 252, 0.95) !important;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--global-divider-color);
-  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  display: none !important;
   
   &.scrolled {
-    box-shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
+    box-shadow: 0 4px 24px rgba(26, 26, 26, 0.08);
   }
   
   .nav-item {
@@ -228,7 +153,7 @@ pre {
   border: 1px solid var(--global-divider-color);
   background: linear-gradient(
     135deg,
-    rgba(248, 250, 252, 1) 0%,
+    rgba(247, 243, 237, 1) 0%,
     rgba(241, 245, 249, 1) 100%
   );
   
@@ -460,7 +385,7 @@ figure {
       &:hover {
         background: linear-gradient(
           to right,
-          rgba(10, 22, 40, 0.03),
+          rgba(26, 26, 26, 0.03),
           transparent
         );
       }
@@ -488,7 +413,7 @@ figure {
 // Section Headers in About Page
 article {
   h2 {
-    font-family: 'Newsreader', Georgia, serif;
+    font-family: 'Crimson Pro', Georgia, serif;
     font-weight: 600;
     font-size: 2rem;
     margin-top: 3rem;

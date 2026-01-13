@@ -31,7 +31,7 @@ body {
 }
 
 body.fixed-top-nav {
-  padding-top: 70px;
+  padding-top: 0; // Navbar hidden
 }
 
 body.sticky-bottom-footer {
