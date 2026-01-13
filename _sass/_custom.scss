@@ -106,19 +106,23 @@
   }
 
   // Circuit image at bottom
-  .social::before {
-    content: '';
-    position: absolute;
-    top: -60px;
-    left: -85px;
-    width: 55px;
-    height: 55px;
-    background-image: url('/assets/img/circuit.png');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    pointer-events: none;
-    opacity: 0.6;
+  .social {
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: -85px;
+      width: 55px;
+      height: 55px;
+      background-image: url('/assets/img/circuit.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      pointer-events: none;
+      opacity: 0.6;
+    }
   }
 }
 
@@ -127,7 +131,7 @@
     .post-title::before,
     .post article::before,
     .social::before {
-      display: none;
+      display: none !important;
     }
   }
 }
