@@ -527,6 +527,11 @@ blockquote {
 
 // Footer
 footer.fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
   background-color: var(--global-footer-bg-color);
   font-size: 0.75rem;
 
