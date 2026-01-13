@@ -1,46 +1,46 @@
 /*******************************************************************************
- * Themes - Refined Editorial with Organic Undertones
+ * Themes - Neural Imaging Aesthetic
+ * Inspired by MRI, fMRI, and DTI neuroimaging
  ******************************************************************************/
 
 :root {
-  // Core colors - Light Mode
-  --global-bg-color: #{$cream};
+  // Core colors - Light Mode with Deep Navy Focus
+  --global-bg-color: #{$off-white};
   --global-code-bg-color: #{$code-bg-color-light};
   --global-text-color: #{$charcoal};
-  --global-text-color-light: #{$warm-grey};
-  --global-theme-color: #{$terracotta};
-  --global-hover-color: #{$terracotta-dark};
-  --global-hover-text-color: #{$warm-white};
-  --global-footer-bg-color: #{$charcoal};
-  --global-footer-text-color: #{$stone};
-  --global-footer-link-color: #{$warm-white};
-  --global-distill-app-color: #{$warm-grey};
-  --global-divider-color: rgba(139, 133, 122, 0.15);
-  --global-card-bg-color: #{$warm-white};
+  --global-text-color-light: #{$slate-grey};
+  --global-theme-color: #{$deep-space};
+  --global-hover-color: #{$navy-medium};
+  --global-hover-text-color: #{$pure-white};
+  --global-footer-bg-color: #{$deep-space};
+  --global-footer-text-color: #{$silver-mist};
+  --global-footer-link-color: #{$accent-cyan};
+  --global-distill-app-color: #{$slate-grey};
+  --global-divider-color: rgba(10, 22, 40, 0.12);
+  --global-card-bg-color: #{$pure-white};
   
-  // Secondary accent colors
-  --global-accent-sage: #{$sage};
-  --global-accent-amber: #{$amber};
-  --global-accent-copper: #{$copper};
+  // Accent colors (used sparingly)
+  --global-accent-primary: #{$accent-cyan};
+  --global-accent-secondary: #{$navy-light};
   
   // Atmospheric effects
-  --global-shadow-soft: 0 2px 12px rgba(45, 42, 38, 0.06);
-  --global-shadow-medium: 0 4px 20px rgba(45, 42, 38, 0.1);
-  --global-shadow-strong: 0 8px 32px rgba(45, 42, 38, 0.15);
+  --global-shadow-soft: 0 2px 16px rgba(10, 22, 40, 0.08);
+  --global-shadow-medium: 0 4px 24px rgba(10, 22, 40, 0.12);
+  --global-shadow-strong: 0 8px 40px rgba(10, 22, 40, 0.18);
 
   // Content blocks
-  --global-tip-block: #{$sage-dark};
-  --global-tip-block-bg: rgba(122, 155, 118, 0.08);
+  --global-tip-block: #{$accent-teal};
+  --global-tip-block-bg: rgba(42, 157, 143, 0.08);
   --global-tip-block-text: #{$charcoal};
-  --global-tip-block-title: #{$sage-dark};
-  --global-warning-block: #{$amber};
-  --global-warning-block-bg: rgba(212, 165, 116, 0.12);
+  --global-tip-block-title: #{$accent-teal};
+  --global-warning-block: #{$navy-medium};
+  --global-warning-block-bg: rgba(42, 59, 82, 0.1);
   --global-warning-block-text: #{$charcoal};
-  --global-warning-block-title: #{$copper};
-  --global-danger-block: #{$warm-coral};
-  --global-danger-block-bg: rgba(212, 124, 106, 0.1);
+  --global-warning-block-title: #{$navy-medium};
+  --global-danger-block: #{$warning-coral};
+  --global-danger-block-bg: rgba(232, 93, 76, 0.1);
   --global-danger-block-text: #{$charcoal};
-  --global-danger-block-title: #{$terracotta-dark};
+  --global-danger-block-title: #{$warning-coral};
 
   .repo-img-light {
     display: block;

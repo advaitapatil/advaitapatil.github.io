@@ -1,7 +1,17 @@
 /*******************************************************************************
- * Custom Styles - Refined Editorial Enhancements
- * Distinctive animations, micro-interactions, and atmospheric effects
+ * Custom Styles - Neural Imaging Aesthetic
+ * Dendritic navigation, synaptic animations, research-lab atmosphere
  ******************************************************************************/
+
+// Neural Pulse Animation
+@keyframes synapticGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(10, 22, 40, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(10, 22, 40, 0.3);
+  }
+}
 
 // Page Load Animations
 @keyframes fadeInUp {
@@ -45,25 +55,10 @@
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s backwards;
 }
 
-// Refined Post Title
+// Post Title
 .post-title {
   position: relative;
   display: inline-block;
-  
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    width: 60px;
-    height: 3px;
-    background: linear-gradient(
-      to right,
-      var(--global-theme-color),
-      var(--global-accent-copper)
-    );
-    border-radius: 2px;
-  }
   
   .font-weight-bold {
     font-weight: 700;
@@ -71,31 +66,50 @@
   }
 }
 
-// Enhanced Container with Organic Background
-.container {
-  position: relative;
+
+// Clean Navigation Styling
+.navbar {
+  background: rgba(248, 250, 252, 0.95) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--global-divider-color);
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
   
-  &::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: 
-      radial-gradient(
-        circle at 20% 20%,
-        var(--global-accent-sage),
-        transparent 40%
-      ),
-      radial-gradient(
-        circle at 80% 80%,
-        var(--global-accent-amber),
-        transparent 40%
-      );
-    opacity: 0.03;
-    pointer-events: none;
-    z-index: -1;
+  &.scrolled {
+    box-shadow: 0 4px 24px rgba(10, 22, 40, 0.08);
+  }
+  
+  .nav-item {
+    position: relative;
+    
+    .nav-link {
+      position: relative;
+      padding: 0.75rem 1rem !important;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--global-theme-color);
+        transform: translateX(-50%);
+        transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
+      
+      &:hover,
+      &.active {
+        color: var(--global-theme-color) !important;
+        
+        &::after {
+          width: 80%;
+        }
+      }
+    }
   }
 }
 
@@ -103,6 +117,10 @@
 article {
   a:not(.btn) {
     font-weight: 500;
+    
+    &::after {
+      background: var(--global-theme-color);
+    }
   }
 }
 
@@ -124,12 +142,12 @@ article {
   }
 }
 
-// Refined Code Blocks
+// Refined Code Blocks with Terminal Aesthetic
 pre,
 code {
-  font-family: 'Monaco', 'Menlo', 'Consolas', monospace;
-  font-size: 0.9em;
-  border-radius: 6px;
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 0.875em;
+  border-radius: 8px;
 }
 
 pre {
@@ -137,19 +155,25 @@ pre {
   overflow-x: auto;
   line-height: 1.6;
   box-shadow: var(--global-shadow-soft);
+  border: 1px solid var(--global-divider-color);
+  background: linear-gradient(
+    135deg,
+    rgba(248, 250, 252, 1) 0%,
+    rgba(241, 245, 249, 1) 100%
+  );
   
   &::-webkit-scrollbar {
-    height: 8px;
+    height: 6px;
   }
   
   &::-webkit-scrollbar-track {
     background: var(--global-divider-color);
-    border-radius: 4px;
+    border-radius: 3px;
   }
   
   &::-webkit-scrollbar-thumb {
     background: var(--global-theme-color);
-    border-radius: 4px;
+    border-radius: 3px;
     
     &:hover {
       background: var(--global-hover-color);
@@ -162,15 +186,15 @@ html {
   scroll-behavior: smooth;
 }
 
-// Custom Selection Colors
+// Custom Selection Colors - Neural Theme
 ::selection {
   background: var(--global-theme-color);
-  color: var(--global-hover-text-color);
+  color: var(--global-bg-color);
 }
 
 ::-moz-selection {
   background: var(--global-theme-color);
-  color: var(--global-hover-text-color);
+  color: var(--global-bg-color);
 }
 
 // Enhanced Focus States
@@ -186,23 +210,30 @@ a:focus {
   outline-offset: 3px;
 }
 
-// Enhanced Navbar Shadow on Scroll
-.navbar {
-  &.scrolled {
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-  }
-}
-
-// Refined Footer
+// Refined Footer with Neural Aesthetic
 footer {
   margin-top: 4rem;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--global-theme-color),
+      transparent
+    );
+    opacity: 0.5;
+  }
   
   &.sticky-bottom {
-    background: linear-gradient(
-      to bottom,
-      transparent,
-      var(--global-divider-color)
-    );
+    background: var(--global-footer-bg-color);
   }
 }
 
@@ -230,6 +261,56 @@ figure {
   }
 }
 
+// Profile Image
+.profile {
+  img {
+    border: none;
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      box-shadow: var(--global-shadow-medium);
+    }
+  }
+}
+
+// Social Icons with Neural Pulse
+.social {
+  .contact-icons {
+    a {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          var(--global-theme-color),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      &:hover::before {
+        opacity: 0.15;
+        animation: synapticGlow 1.5s ease-in-out infinite;
+      }
+      
+      i::before {
+        transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
+      
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
 // Responsive Typography Adjustments
 @media (max-width: 768px) {
   html {
@@ -246,6 +327,16 @@ figure {
     float: none !important;
     width: 100% !important;
     margin: 0 0 2rem 0;
+  }
+  
+  .navbar {
+    .navbar-nav::before {
+      display: none;
+    }
+    
+    .nav-item::before {
+      display: none;
+    }
   }
 }
 
@@ -277,7 +368,7 @@ figure {
     margin-top: 1rem;
     
     th {
-      font-family: 'Instrument Sans', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       font-weight: 600;
       font-size: 0.9375rem;
       color: var(--global-text-color-light);
@@ -299,7 +390,7 @@ figure {
       &:hover {
         background: linear-gradient(
           to right,
-          var(--global-card-bg-color),
+          rgba(10, 22, 40, 0.03),
           transparent
         );
       }
@@ -327,7 +418,7 @@ figure {
 // Section Headers in About Page
 article {
   h2 {
-    font-family: 'Fraunces', Georgia, serif;
+    font-family: 'Newsreader', Georgia, serif;
     font-weight: 600;
     font-size: 2rem;
     margin-top: 3rem;
@@ -360,6 +451,17 @@ article {
         color: var(--global-theme-color);
       }
     }
+  }
+}
+
+// Progress Bar Neural Styling
+progress {
+  &::-webkit-progress-value {
+    background: var(--global-theme-color);
+  }
+  
+  &::-moz-progress-bar {
+    background: var(--global-theme-color);
   }
 }
 

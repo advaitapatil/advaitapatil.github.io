@@ -1,49 +1,42 @@
 /*******************************************************************************
  * Variables used throughout the theme.
- * Refined Editorial with Organic Undertones - A distinctive academic aesthetic
+ * Neural Imaging Aesthetic - AI & Neurosurgery inspired
  ******************************************************************************/
 
 // Typography fonts are loaded in _includes/head.html
-// Fraunces: Distinctive serif for headings
-// Instrument Sans: Clean sans-serif for body text
+// Newsreader: Refined, intellectual serif for headings
+// DM Sans: Clean, modern sans-serif for body text
 
-// Core Brand Colors - Natural & Sophisticated
-$terracotta:          #C97B63 !default;
-$terracotta-dark:     #A85C45 !default;
-$sage:                #7A9B76 !default;
-$sage-light:          #9DB99A !default;
-$sage-dark:           #5A7A56 !default;
+// Core Brand Colors - Neural Imaging Palette
+// Deep structural tones (inspired by MRI backgrounds)
+$deep-space:          #0A1628 !default;  // Near-black with blue undertone
+$midnight:            #101B2E !default;  // Deep navy
+$slate-blue:          #1A2940 !default;  // Structural MRI tone
+$navy-medium:         #2A3B52 !default;  // Medium navy (hover state)
+$navy-light:          #3D5068 !default;  // Light navy accent
 
 // Accent Colors
-$copper:              #B87350 !default;
-$amber:               #D4A574 !default;
-$teal:                #5B9AA0 !default;
-$teal-bright:         #6FB3B8 !default;
-$warm-coral:          #D47C6A !default;
+$accent-cyan:         #4ECDC4 !default;  // Subtle accent only
+$accent-teal:         #2A9D8F !default;  // Secondary accent
+$warning-coral:       #E85D4C !default;  // Alert/warning only
 
-// Neutrals - Warm & Organic
-$cream:               #FAF7F2 !default;
-$warm-white:          #FEFDFB !default;
-$stone:               #E8E3D8 !default;
-$warm-grey:           #8B857A !default;
-$charcoal:            #2D2A26 !default;
-$deep-charcoal:       #1A1816 !default;
-
-// Dark Mode Palette
-$navy-ink:            #1E2832 !default;
-$navy-deep:           #141A24 !default;
-$warm-cream:          #F0E9DC !default;
-$muted-copper:        #C89B7E !default;
+// Clean Neutrals - Medical Precision
+$pure-white:          #FFFFFF !default;
+$off-white:           #F8FAFC !default;
+$silver-mist:         #E2E8F0 !default;
+$cool-grey:           #94A3B8 !default;
+$slate-grey:          #64748B !default;
+$charcoal:            #334155 !default;
 
 // Legacy color mappings for compatibility
-$grey-color:          $warm-grey !default;
-$grey-color-light:    $stone !default;
-$grey-color-dark:     $navy-ink !default;
-$grey-900:            $deep-charcoal !default;
+$grey-color:          $slate-grey !default;
+$grey-color-light:    $silver-mist !default;
+$grey-color-dark:     $slate-blue !default;
+$grey-900:            $deep-space !default;
 
-$white-color:         $warm-white !default;
-$black-color:         $charcoal !default;
+$white-color:         $pure-white !default;
+$black-color:         $deep-space !default;
 
 // Theme colors
-$code-bg-color-light:     rgba($sage, 0.08);
-$code-bg-color-dark:      rgba($muted-copper, 0.12);
+$code-bg-color-light:     rgba($deep-space, 0.04);
+$code-bg-color-dark:      rgba($navy-medium, 0.08);
