@@ -1,26 +1,103 @@
 /*******************************************************************************
  * Styles for the base elements of the theme.
+ * Refined Editorial with Organic Undertones
  ******************************************************************************/
 
-// Typography
+// Typography - Distinctive & Refined
 
-p,
+body {
+  font-family: 'Instrument Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 400;
+  line-height: 1.65;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5,
-h6,
-em,
-div,
-li,
-span,
-strong {
+h6 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--global-text-color);
+  margin-top: 1.5em;
+  margin-bottom: 0.75em;
+  font-feature-settings: 'ss01' on, 'ss02' on;
+}
+
+h1 {
+  font-size: 2.75rem;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
+}
+
+h2 {
+  font-size: 2rem;
+  margin-top: 2em;
+  
+  @media (max-width: 768px) {
+    font-size: 1.625rem;
+  }
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+p,
+li {
+  color: var(--global-text-color);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+span {
   color: var(--global-text-color);
 }
 
+p {
+  margin-bottom: 1.25rem;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+em {
+  color: var(--global-text-color);
+  font-style: italic;
+}
+
+strong {
+  color: var(--global-text-color);
+  font-weight: 600;
+}
+
 hr {
-  border-top: 1px solid var(--global-divider-color);
+  border: none;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--global-divider-color),
+    transparent
+  );
+  margin: 3rem auto;
+  opacity: 0.6;
 }
 
 table {
@@ -37,14 +114,28 @@ table {
 a,
 table.table a {
   color: var(--global-theme-color);
-
-  &:hover {
-    color: var(--global-theme-color);
-    text-decoration: underline;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--global-theme-color);
+    transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
   }
 
-  &:hover:after :not(.nav-item.dropdown) {
-    width: 100%;
+  &:hover {
+    color: var(--global-hover-color);
+    text-decoration: none;
+    
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -58,11 +149,33 @@ img {
 }
 
 blockquote {
-  background: var(--global-bg-color);
-  border-left: 2px solid var(--global-theme-color);
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;
-  font-size: 1.2rem;
+  background: var(--global-card-bg-color);
+  border-left: 4px solid var(--global-theme-color);
+  margin: 2rem 0;
+  padding: 1.5rem 2rem;
+  font-size: 1.125rem;
+  font-style: italic;
+  font-family: 'Fraunces', Georgia, serif;
+  line-height: 1.6;
+  position: relative;
+  box-shadow: var(--global-shadow-soft);
+  border-radius: 0 4px 4px 0;
+  
+  &::before {
+    content: '"';
+    position: absolute;
+    left: 0.75rem;
+    top: 0.5rem;
+    font-size: 3rem;
+    color: var(--global-theme-color);
+    opacity: 0.2;
+    font-family: 'Fraunces', Georgia, serif;
+    line-height: 1;
+  }
+  
+  p {
+    margin-bottom: 0;
+  }
 }
 
 // Math
@@ -81,17 +194,36 @@ blockquote {
   text-align: center;
 }
 
-// Card
+// Card - Refined with Soft Shadows
 
 .card {
   background-color: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 8px;
+  box-shadow: var(--global-shadow-soft);
+  transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: var(--global-shadow-medium);
+    transform: translateY(-2px);
+  }
 
   img {
     width: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+  }
+  
+  &:hover img {
+    transform: scale(1.03);
   }
 
   .card-title {
     color: var(--global-text-color);
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: -0.02em;
   }
 
   .card-item {
@@ -112,15 +244,29 @@ blockquote {
   color: var(--global-theme-color);
 }
 
-// Profile
+// Profile - Elegant & Sophisticated
 
 .profile {
   width: 100%;
+  
+  img {
+    border-radius: 8px;
+    box-shadow: var(--global-shadow-medium);
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      box-shadow: var(--global-shadow-strong);
+      transform: translateY(-2px);
+    }
+  }
 
   .address {
     margin-bottom: 5px;
-    margin-top: 5px;
-    font-family: monospace;
+    margin-top: 1rem;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 0.9375rem;
+    color: var(--global-text-color-light);
+    line-height: 1.6;
 
     p {
       display: inline-block;
@@ -130,16 +276,18 @@ blockquote {
 }
 
 .profile.float-right {
-  margin-left: 1rem;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .profile.float-left {
-  margin-right: 1rem;
+  margin-right: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 @media (min-width: 576px) {
   .profile {
-    width: 30%;
+    width: 32%;
 
     .address {
       p {
@@ -151,26 +299,36 @@ blockquote {
 
 .post-description {
   margin-bottom: 2rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--global-text-color-light);
 
   a {
-    color: inherit;
+    color: var(--global-theme-color);
+    
+    &::after {
+      display: none;
+    }
 
     &:hover {
-      color: var(--global-theme-color);
+      color: var(--global-hover-color);
       text-decoration: none;
     }
   }
 }
 
 
-// Navbar customization
+// Navbar customization - Clean & Sophisticated
 
 .navbar {
-  box-shadow: none;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
-  opacity: 0.95;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .navbar .dropdown-menu {
@@ -208,20 +366,55 @@ blockquote {
 
   .navbar-brand {
     color: var(--global-text-color);
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.125rem;
+    letter-spacing: -0.02em;
+    transition: color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      color: var(--global-theme-color);
+    }
   }
 
   .navbar-nav .nav-item .nav-link {
     color: var(--global-text-color);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    letter-spacing: 0.01em;
+    padding: 0.5rem 1rem;
+    position: relative;
+    transition: color 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0.25rem;
+      left: 1rem;
+      right: 1rem;
+      height: 2px;
+      background: var(--global-theme-color);
+      transform: scaleX(0);
+      transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    }
 
     &:hover {
-      color: var(--global-hover-color);
+      color: var(--global-theme-color);
+      
+      &::after {
+        transform: scaleX(1);
+      }
     }
   }
 
   .navbar-nav .nav-item.active>.nav-link {
     background-color: inherit;
-    font-weight: bolder;
+    font-weight: 600;
     color: var(--global-theme-color);
+    
+    &::after {
+      transform: scaleX(1);
+    }
 
     &:hover {
       color: var(--global-hover-color);
@@ -299,30 +492,46 @@ blockquote {
   }
 }
 
-// Social (bottom)
+// Social (bottom) - Refined & Animated
 
 .social {
   text-align: center;
+  margin-top: 3rem;
 
   .contact-icons {
-    font-size: 4rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
 
     a {
+      display: inline-block;
+      position: relative;
+      transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      
       i::before {
-        color: var(--global-text-color);
-        transition-property: all 0.2s ease-in-out;
+        color: var(--global-text-color-light);
+        transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
       }
 
       &:hover {
+        transform: translateY(-4px);
+        
         i::before {
           color: var(--global-theme-color);
         }
+      }
+      
+      &::after {
+        content: none;
       }
     }
   }
 
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.875rem;
+    margin-top: 1.5rem;
+    color: var(--global-text-color-light);
   }
 }
 
@@ -390,17 +599,43 @@ footer.sticky-bottom {
   }
 }
 
-// Blog
+// Blog - Refined Editorial
 
 .header-bar {
-  border-bottom: 1px solid var(--global-divider-color);
+  border-bottom: 2px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-top: 3rem;
+  padding-bottom: 3.5rem;
+  margin-bottom: 2rem;
+  position: relative;
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 4rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+    margin-bottom: 0;
+    
+    @media (max-width: 768px) {
+      font-size: 2.5rem;
+    }
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(
+      to right,
+      var(--global-theme-color),
+      var(--global-accent-copper)
+    );
+    border-radius: 2px;
   }
 }
 
@@ -437,25 +672,46 @@ footer.sticky-bottom {
   li {
     border-bottom: 1px solid var(--global-divider-color);
     list-style: none;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      padding-left: 1rem;
+      background: linear-gradient(
+        to right,
+        var(--global-card-bg-color),
+        transparent
+      );
+    }
 
     .post-meta {
       color: var(--global-text-color-light);
-      font-size: 0.875rem;
-      margin-bottom: 0;
+      font-size: 0.9375rem;
+      margin-bottom: 0.5rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
     }
 
     .post-tags {
       color: var(--global-text-color-light);
       font-size: 0.875rem;
-      padding-top: 0.25rem;
+      padding-top: 0.5rem;
       padding-bottom: 0;
     }
 
     a {
       color: var(--global-text-color);
       text-decoration: none;
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.5rem;
+      letter-spacing: -0.02em;
+      
+      &::after {
+        display: none;
+      }
 
       &:hover {
         color: var(--global-theme-color);
@@ -500,11 +756,15 @@ footer.sticky-bottom {
 }
 
 
-// Projects
+// Projects - Refined Editorial
 
 .projects {
   a {
     text-decoration: none;
+    
+    &::after {
+      display: none;
+    }
 
     &:hover {
       .card-title {
@@ -514,14 +774,18 @@ footer.sticky-bottom {
   }
 
   .card {
+    margin-bottom: 1.5rem;
+    
     img {
       width: 100%;
+      object-fit: cover;
+      aspect-ratio: 16 / 10;
     }
   }
 
   .card-item {
     width: auto;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
 
     .row {
       display: flex;
@@ -532,48 +796,75 @@ footer.sticky-bottom {
   .grid-sizer,
   .grid-item {
     width: 250px;
-    margin-bottom: 10px;
+    margin-bottom: 1.5rem;
   }
 
   h2.category {
-    color: var(--global-divider-color);
-    border-bottom: 1px solid var(--global-divider-color);
-    padding-top: 0.5rem;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
+    color: var(--global-text-color-light);
+    border-bottom: 2px solid var(--global-divider-color);
+    padding-top: 1rem;
+    padding-bottom: 0.75rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
     text-align: right;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
   }
 }
 
 
-// Publications
+// Publications - Refined Editorial
 
 .publications {
   margin-top: 2rem;
 
   h1 {
     color: var(--global-theme-color);
-    font-size: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 700;
     text-align: center;
-    margin-top: 1em;
+    margin-top: 1.5em;
     margin-bottom: 1em;
+    letter-spacing: -0.03em;
+    position: relative;
+    
+    &::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(
+        to right,
+        var(--global-theme-color),
+        var(--global-accent-copper)
+      );
+      margin: 0.75rem auto 0;
+      border-radius: 2px;
+    }
   }
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-family: 'Fraunces', Georgia, serif;
+    font-weight: 600;
 
     span {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
     }
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
-    border-top: 1px solid var(--global-divider-color);
-    padding-top: 1rem;
-    margin-top: 2rem;
+    color: var(--global-text-color-light);
+    border-top: 2px solid var(--global-divider-color);
+    padding-top: 1.5rem;
+    margin-top: 3rem;
     margin-bottom: -2rem;
     text-align: right;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
   }
 
   ol.bibliography {
@@ -803,7 +1094,7 @@ progress {
 
   /* Dimensions */
   width: 100%;
-  height: 1px;
+  height: 3px;
 
   /* Reset the appearance */
   -webkit-appearance: none;
@@ -825,11 +1116,20 @@ progress::-webkit-progress-bar {
 }
 
 progress::-webkit-progress-value {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(
+    to right,
+    var(--global-theme-color),
+    var(--global-accent-copper)
+  );
+  transition: width 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 progress::-moz-progress-bar {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(
+    to right,
+    var(--global-theme-color),
+    var(--global-accent-copper)
+  );
 }
 
 .progress-container {
@@ -838,15 +1138,20 @@ progress::-moz-progress-bar {
   position: fixed;
   top: 56px;
   left: 0;
-  height: 5px;
+  height: 3px;
   display: block;
 }
 
 .progress-bar {
-  background-color: var(--global-theme-color);
+  background: linear-gradient(
+    to right,
+    var(--global-theme-color),
+    var(--global-accent-copper)
+  );
   width: 0%;
   display: block;
   height: inherit;
+  transition: width 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 /* Copy button */

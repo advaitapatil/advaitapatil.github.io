@@ -1,38 +1,49 @@
 /*******************************************************************************
  * Variables used throughout the theme.
- * To adjust anything, simply edit the variables below and rebuild the theme.
+ * Refined Editorial with Organic Undertones - A distinctive academic aesthetic
  ******************************************************************************/
 
+// Typography fonts are loaded in _includes/head.html
+// Fraunces: Distinctive serif for headings
+// Instrument Sans: Clean sans-serif for body text
 
-// Colors
-$red-color:           #FF3636 !default;
-$red-color-dark:      #B71C1C !default;
-$orange-color:        #F29105 !default;
-$blue-color:          #0076df !default;
-$blue-color-dark:     #00369f !default;
-$cyan-color:          #2698BA !default;
-$light-cyan-color:    lighten($cyan-color, 25%);
-$green-color:         #00ab37 !default;
-$green-color-lime:    #B7D12A !default;
-$green-color-dark:    #009f06 !default;
-$green-color-light:   #ddffdd !default;
-$green-color-bright:  #11D68B !default;
-$purple-color:        #B509AC !default;
-$light-purple-color:  lighten($purple-color, 25%);
-$pink-color:          #f92080 !default;
-$pink-color-light:    #ffdddd !default;
-$yellow-color:        #efcc00 !default;
+// Core Brand Colors - Natural & Sophisticated
+$terracotta:          #C97B63 !default;
+$terracotta-dark:     #A85C45 !default;
+$sage:                #7A9B76 !default;
+$sage-light:          #9DB99A !default;
+$sage-dark:           #5A7A56 !default;
 
-$grey-color:          #828282 !default;
-$grey-color-light:    lighten($grey-color, 40%);
-$grey-color-dark:     #1C1C1D;
-$grey-900:            #212529;
+// Accent Colors
+$copper:              #B87350 !default;
+$amber:               #D4A574 !default;
+$teal:                #5B9AA0 !default;
+$teal-bright:         #6FB3B8 !default;
+$warm-coral:          #D47C6A !default;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+// Neutrals - Warm & Organic
+$cream:               #FAF7F2 !default;
+$warm-white:          #FEFDFB !default;
+$stone:               #E8E3D8 !default;
+$warm-grey:           #8B857A !default;
+$charcoal:            #2D2A26 !default;
+$deep-charcoal:       #1A1816 !default;
 
+// Dark Mode Palette
+$navy-ink:            #1E2832 !default;
+$navy-deep:           #141A24 !default;
+$warm-cream:          #F0E9DC !default;
+$muted-copper:        #C89B7E !default;
+
+// Legacy color mappings for compatibility
+$grey-color:          $warm-grey !default;
+$grey-color-light:    $stone !default;
+$grey-color-dark:     $navy-ink !default;
+$grey-900:            $deep-charcoal !default;
+
+$white-color:         $warm-white !default;
+$black-color:         $charcoal !default;
 
 // Theme colors
-
-$code-bg-color-light:     rgba($purple-color, 0.05);
-$code-bg-color-dark:      #2c3237 !default;
+$code-bg-color-light:     rgba($sage, 0.08);
+$code-bg-color-dark:      rgba($muted-copper, 0.12);
