@@ -42,78 +42,10 @@
   --global-danger-block-text: #{$charcoal};
   --global-danger-block-title: #{$terracotta-dark};
 
-  .fa-sun {
-    display : none;
-  }
-  .fa-moon {
-    padding-left: 10px;
-    padding-top: 12px;
-    display : block;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  }
-
   .repo-img-light {
     display: block;
   }
   .repo-img-dark {
     display: none;
-  }
-}
-
-html[data-theme='dark'] {
-  // Core colors - Dark Mode
-  --global-bg-color: #{$navy-deep};
-  --global-code-bg-color: #{$code-bg-color-dark};
-  --global-text-color: #{$warm-cream};
-  --global-text-color-light: #{$stone};
-  --global-theme-color: #{$muted-copper};
-  --global-hover-color: #{$amber};
-  --global-hover-text-color: #{$navy-deep};
-  --global-footer-bg-color: #{$charcoal};
-  --global-footer-text-color: #{$stone};
-  --global-footer-link-color: #{$warm-cream};
-  --global-distill-app-color: #{$stone};
-  --global-divider-color: rgba(240, 233, 220, 0.12);
-  --global-card-bg-color: #{$navy-ink};
-  
-  // Secondary accent colors
-  --global-accent-sage: #{$teal-bright};
-  --global-accent-amber: #{$amber};
-  --global-accent-copper: #{$muted-copper};
-  
-  // Atmospheric effects
-  --global-shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.3);
-  --global-shadow-medium: 0 4px 24px rgba(0, 0, 0, 0.4);
-  --global-shadow-strong: 0 8px 40px rgba(0, 0, 0, 0.5);
-
-  // Content blocks
-  --global-tip-block: #{$teal-bright};
-  --global-tip-block-bg: rgba(91, 154, 160, 0.15);
-  --global-tip-block-text: #{$warm-cream};
-  --global-tip-block-title: #{$teal-bright};
-  --global-warning-block: #{$amber};
-  --global-warning-block-bg: rgba(212, 165, 116, 0.15);
-  --global-warning-block-text: #{$warm-cream};
-  --global-warning-block-title: #{$amber};
-  --global-danger-block: #{$warm-coral};
-  --global-danger-block-bg: rgba(212, 124, 106, 0.15);
-  --global-danger-block-text: #{$warm-cream};
-  --global-danger-block-title: #{$warm-coral};
-
-  .fa-sun {
-    padding-left: 10px;
-    padding-top: 12px;
-    display : block;
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  }
-  .fa-moon {
-    display : none;
-  }
-
-  .repo-img-light {
-    display: none;
-  }
-  .repo-img-dark {
-    display: block;
   }
 }

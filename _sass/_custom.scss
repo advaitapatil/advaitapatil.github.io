@@ -186,40 +186,6 @@ a:focus {
   outline-offset: 3px;
 }
 
-// Light Toggle Enhancement
-#light-toggle {
-  position: relative;
-  overflow: hidden;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--global-theme-color);
-    opacity: 0;
-    border-radius: 50%;
-    transform: scale(0);
-    transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-  }
-  
-  &:hover::before {
-    opacity: 0.1;
-    transform: scale(1);
-  }
-  
-  i {
-    position: relative;
-    z-index: 1;
-  }
-}
-
 // Enhanced Navbar Shadow on Scroll
 .navbar {
   &.scrolled {
@@ -288,8 +254,7 @@ figure {
   .navbar,
   footer,
   .social,
-  progress,
-  #light-toggle {
+  progress {
     display: none !important;
   }
   
