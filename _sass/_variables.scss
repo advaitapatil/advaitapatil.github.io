@@ -3,9 +3,7 @@
  * Scholarly Restraint - Academic credibility meets human warmth
  ******************************************************************************/
 
-// Typography fonts are loaded in _includes/head.html
-// Crimson Pro: Academic, scholarly serif for headings
-// DM Sans: Clean, modern sans-serif for body text
+// Typography: Georgia (system serif with Times New Roman fallback)
 
 // Core Brand Colors - Scholarly Restraint Palette
 // Warm foundations
@@ -17,6 +15,10 @@ $deep-charcoal:       #0D0D0D !default;  // Deepest text for emphasis
 $scholarly-brown:      #A68B5B !default;   // Warm tan - slightly darker
 $scholarly-brown-light: #B89A6A !default;  // Hover state
 $scholarly-brown-dark: #8F7749 !default;   // Active/pressed
+
+// Link-specific colors - slightly darker brown than the main theme accent
+$link-color:           #7D6240 !default;   // Slightly darker brown for hyperlinks
+$link-hover-color:     #6B5335 !default;   // Even darker on hover
 
 // Secondary accent - Aged gold (warmth, achievement, neural glow - used sparingly)
 $aged-gold:           #B8963E !default;

@@ -55,6 +55,11 @@
   animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s backwards;
 }
 
+// Name / Title Typography — Satoshi for the name display
+h1.post-title {
+  font-family: 'Satoshi', sans-serif;
+}
+
 // Post Title
 .post-title {
   position: relative;
@@ -114,7 +119,7 @@ article {
     font-weight: 500;
     
     &::after {
-      background: var(--global-theme-color);
+      background: var(--global-link-color);
     }
   }
 }
@@ -363,7 +368,7 @@ figure {
     margin-top: 1rem;
     
     th {
-      font-family: 'DM Sans', sans-serif;
+      font-family: Georgia, 'Times New Roman', serif;
       font-weight: 600;
       font-size: 0.9375rem;
       color: var(--global-text-color-light);
@@ -413,7 +418,7 @@ figure {
 // Section Headers in About Page
 article {
   h2 {
-    font-family: 'Crimson Pro', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-weight: 600;
     font-size: 2rem;
     margin-top: 3rem;

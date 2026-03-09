@@ -16,9 +16,9 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I'm a medical student at [Harvard Medical School](https://hms.harvard.edu/). I previously studied at [Stanford](https://cs.stanford.edu/), where I received a master's in Computer Science (AI track) and bachelor’s degrees in Computer Science and Biology.
+I'm a medical student at [Harvard Medical School](https://hms.harvard.edu/) and *Head of Health and Life Sciences* at [Quadrillion Labs](http://quadrillion.io). I previously received a master's in Computer Science (AI track) and bachelor’s degrees in Computer Science and Biology from [Stanford](https://cs.stanford.edu/).
 
-My research focuses on the integration of human and artificial intelligence in neurosurgery. I lead initiatives at [Mass General Brigham](https://www.massgeneral.org/neurosurgery) translating advances in machine learning into clinically-deployed algorithms and rigorous studies to improve safety, access, and outcomes in neurosurgical care.
+I research the integration of human and artificial intelligence in neurosurgery. I lead initiatives at [Mass General Brigham](https://www.massgeneral.org/neurosurgery) translating machine learning advances into clinically-deployed algorithms and rigorous studies to improve safety, access, and outcomes in neurosurgical care.
 
 I’ve spent time innovating from molecular to population scales at [Stanford ChEM-H](https://chemh.stanford.edu/) & [Bioengineering](https://bioengineering.stanford.edu/), [NASA Astrobiology](https://www.nasa.gov/space-science-and-astrobiology-at-ames/), [Stanford Health Care](https://med.stanford.edu/gensurg.html), the [Center for International Security and Cooperation](https://cisac.fsi.stanford.edu/), [MIT](https://cheme.mit.edu/), and [UCSF](https://bts.ucsf.edu/).
 
