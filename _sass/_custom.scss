@@ -1,0 +1,481 @@
+/*******************************************************************************
+ * Custom Styles - Neural Imaging Aesthetic
+ * Dendritic navigation, synaptic animations, research-lab atmosphere
+ ******************************************************************************/
+
+// Neural Pulse Animation
+@keyframes synapticGlow {
+  0%, 100% {
+    box-shadow: 0 0 0 rgba(26, 26, 26, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(26, 26, 26, 0.3);
+  }
+}
+
+// Page Load Animations
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+// Apply subtle entrance animations
+.post {
+  animation: fadeIn 0.6s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.post-header {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.profile {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 0.1s backwards;
+}
+
+.post article > div {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 0.2s backwards;
+}
+
+.social {
+  animation: fadeInUp 0.8s cubic-bezier(0.4, 0.0, 0.2, 1) 0.3s backwards;
+}
+
+// Name / Title Typography — Satoshi for the name display
+h1.post-title {
+  font-family: 'Satoshi', sans-serif;
+}
+
+// Post Title
+.post-title {
+  position: relative;
+  display: inline-block;
+  
+  .font-weight-bold {
+    font-weight: 700;
+    font-size: inherit;
+  }
+}
+
+// Clean Navigation Styling
+.navbar {
+  display: none !important;
+  
+  &.scrolled {
+    box-shadow: 0 4px 24px rgba(26, 26, 26, 0.08);
+  }
+  
+  .nav-item {
+    position: relative;
+    
+    .nav-link {
+      position: relative;
+      padding: 0.75rem 1rem !important;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: var(--global-theme-color);
+        transform: translateX(-50%);
+        transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
+      
+      &:hover,
+      &.active {
+        color: var(--global-theme-color) !important;
+        
+        &::after {
+          width: 80%;
+        }
+      }
+    }
+  }
+}
+
+// Refined Link Hover Effects for Main Content
+article {
+  a:not(.btn) {
+    font-weight: 500;
+    
+    &::after {
+      background: var(--global-link-color);
+    }
+  }
+}
+
+// Enhanced Button Styles
+.btn {
+  border-radius: 6px;
+  font-weight: 500;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+  letter-spacing: 0.01em;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--global-shadow-medium);
+  }
+  
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Refined Code Blocks with Terminal Aesthetic
+pre,
+code {
+  font-family: 'SF Mono', 'Monaco', 'Menlo', 'Consolas', monospace;
+  font-size: 0.875em;
+  border-radius: 8px;
+}
+
+pre {
+  padding: 1.5rem;
+  overflow-x: auto;
+  line-height: 1.6;
+  box-shadow: var(--global-shadow-soft);
+  border: 1px solid var(--global-divider-color);
+  background: linear-gradient(
+    135deg,
+    rgba(247, 243, 237, 1) 0%,
+    rgba(241, 245, 249, 1) 100%
+  );
+  
+  &::-webkit-scrollbar {
+    height: 6px;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--global-divider-color);
+    border-radius: 3px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--global-theme-color);
+    border-radius: 3px;
+    
+    &:hover {
+      background: var(--global-hover-color);
+    }
+  }
+}
+
+// Smooth Scrolling
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom Selection Colors - Neural Theme
+::selection {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+}
+
+::-moz-selection {
+  background: var(--global-theme-color);
+  color: var(--global-bg-color);
+}
+
+// Enhanced Focus States
+*:focus {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--global-theme-color);
+  outline-offset: 3px;
+}
+
+// Refined Footer with Neural Aesthetic
+footer {
+  margin-top: 4rem;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      var(--global-theme-color),
+      transparent
+    );
+    opacity: 0.5;
+  }
+  
+  &.sticky-bottom {
+    background: var(--global-footer-bg-color);
+  }
+}
+
+// Enhanced Image Containers
+figure {
+  margin: 2rem 0;
+  
+  img {
+    border-radius: 8px;
+    box-shadow: var(--global-shadow-soft);
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      box-shadow: var(--global-shadow-medium);
+      transform: scale(1.01);
+    }
+  }
+  
+  figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.875rem;
+    color: var(--global-text-color-light);
+    text-align: center;
+    font-style: italic;
+  }
+}
+
+// Profile Image
+.profile {
+  img {
+    border: none;
+    transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+    
+    &:hover {
+      box-shadow: var(--global-shadow-medium);
+    }
+  }
+}
+
+// Social Icons with Neural Pulse
+.social {
+  .contact-icons {
+    a {
+      position: relative;
+      
+      &::before {
+        content: '';
+        position: absolute;
+        inset: -8px;
+        border-radius: 50%;
+        background: radial-gradient(
+          circle,
+          var(--global-theme-color),
+          transparent 70%
+        );
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+      
+      &:hover::before {
+        opacity: 0.15;
+        animation: synapticGlow 1.5s ease-in-out infinite;
+      }
+      
+      i::before {
+        transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      }
+      
+      &:hover {
+        i::before {
+          color: var(--global-theme-color);
+        }
+      }
+    }
+  }
+}
+
+// Responsive Typography Adjustments
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+  
+  .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  
+  .profile.float-right,
+  .profile.float-left {
+    float: none !important;
+    width: 100% !important;
+    margin: 0 0 2rem 0;
+  }
+  
+  .navbar {
+    .navbar-nav::before {
+      display: none;
+    }
+    
+    .nav-item::before {
+      display: none;
+    }
+  }
+}
+
+// Print Styles
+@media print {
+  .navbar,
+  footer,
+  .social,
+  progress {
+    display: none !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+// News Section Styling
+.news {
+  margin-top: 2rem;
+  
+  table {
+    margin-top: 1rem;
+    
+    th {
+      font-family: Georgia, 'Times New Roman', serif;
+      font-weight: 600;
+      font-size: 0.9375rem;
+      color: var(--global-text-color-light);
+      width: 140px;
+      padding: 1rem 0.5rem 1rem 0;
+      letter-spacing: 0.01em;
+    }
+    
+    td {
+      padding: 1rem 0.5rem;
+      font-size: 1.0625rem;
+      line-height: 1.6;
+    }
+    
+    tr {
+      border-bottom: 1px solid var(--global-divider-color);
+      transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
+      
+      &:hover {
+        background: linear-gradient(
+          to right,
+          rgba(26, 26, 26, 0.03),
+          transparent
+        );
+      }
+      
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+  
+  .news-title {
+    font-weight: 600;
+    color: var(--global-theme-color);
+    
+    &::after {
+      display: none;
+    }
+    
+    &:hover {
+      color: var(--global-hover-color);
+    }
+  }
+}
+
+// Section Headers in About Page
+article {
+  h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 0;
+      width: 50%;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        var(--global-theme-color),
+        transparent
+      );
+    }
+    
+    a {
+      color: inherit;
+      
+      &::after {
+        display: none;
+      }
+      
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+}
+
+// Progress Bar Neural Styling
+progress {
+  &::-webkit-progress-value {
+    background: var(--global-theme-color);
+  }
+  
+  &::-moz-progress-bar {
+    background: var(--global-theme-color);
+  }
+}
+
+// Accessibility: Reduced Motion
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}
