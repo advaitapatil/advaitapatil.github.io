@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advait A. Patil</title>
+  <meta name="description" content="Advait A. Patil — MD candidate at Harvard Medical School, Head of Health and Life Sciences at Quadrillion Labs, Stanford CS/AI and Biology.">
+  <meta name="author" content="Advait A. Patil">
+  <link rel="canonical" href="https://advaitapatil.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Advait A. Patil">
+  <meta property="og:description" content="AI and neurosurgery. Harvard Medical School, Quadrillion Labs, Stanford.">
+  <meta property="og:url" content="https://advaitapatil.github.io/">
+  <meta property="og:type" content="website">
+
+  <!-- Google Analytics (GA4). Replace G-XXXXXXXXXX with your Measurement ID
+       from analytics.google.com > Admin > Data Streams. -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-394931802"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-394931802');
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #fcfcfa;
+      --text: #1a1a18;
+      --text-2: #5c5b55;
+      --muted: #8a897f;
+      --rule: #e4e3dc;
+      --accent: #2b5fa3;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
+      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151513;
+        --text: #ecebe4;
+        --text-2: #a8a79d;
+        --muted: #77766c;
+        --rule: #2c2c28;
+        --accent: #7ba7dd;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      max-width: 620px;
+      margin: 0 auto;
+      padding: 88px 24px 48px;
+      animation: fade 0.5s ease both;
+    }
+    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @media (prefers-reduced-motion: reduce) {
+      main { animation: none; }
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 16px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-size: 34px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.15;
+    }
+    .loc {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    .intro {
+      margin-top: 14px;
+      color: var(--text-2);
+      max-width: 52ch;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 2px;
+      border-radius: 2px;
+    }
+
+    dl {
+      margin-top: 44px;
+      display: grid;
+      grid-template-columns: 96px minmax(0, 1fr);
+      column-gap: 28px;
+      row-gap: 22px;
+    }
+    dt {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding-top: 3px;
+    }
+    dd { color: var(--text); }
+    dd p + p { margin-top: 6px; }
+    .quiet { color: var(--text-2); }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--rule);
+    }
+    footer a {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--muted);
+    }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 560px) {
+      main { padding: 56px 20px 40px; }
+      h1 { font-size: 28px; }
+      header { flex-direction: column; gap: 4px; }
+      dl {
+        grid-template-columns: 1fr;
+        row-gap: 6px;
+        margin-top: 36px;
+      }
+      dt { padding-top: 0; }
+      dd { margin-bottom: 18px; }
+      dd:last-of-type { margin-bottom: 0; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Advait A. Patil</h1>
+      <span class="loc">boston / nyc</span>
+    </header>
+
+    <p class="intro">
+      Working at the interface of AI and neurosurgery. MD candidate at
+      <a href="https://hms.harvard.edu/">Harvard Medical School</a> and Head of
+      Health and Life Sciences at <a href="https://quadrillion.io/">Quadrillion Labs</a>.
+      Stanford CS/AI and Biology.
+    </p>
+
+    <dl>
+      <dt>now</dt>
+      <dd>
+        <p>Building the future of autonomous research. Leading clinical ML from
+        code to deployment at Mass General Brigham Neurosurgery.</p>
+      </dd>
+
+      <dt>research</dt>
+      <dd>
+        <p>Intraoperative AI — real-time inference in the operating room.</p>
+        <p>Clinical LLM systems — multi-agent triage and automated quality review.</p>
+        <p>Neuro-oncology outcomes — machine learning for glioma prognosis and recurrence.</p>
+      </dd>
+
+      <dt>formerly</dt>
+      <dd class="quiet">
+        Stanford Medicine, NASA Astrobiology, MIT, UCSF.
+        U.S. Presidential Scholar, Science Talent Search finalist, RSI.
+      </dd>
+
+      <dt>elsewhere</dt>
+      <dd>
+        <a href="https://scholar.google.com/citations?user=dEsZgq0AAAAJ&amp;hl=en">publications</a> ·
+        <a href="https://www.linkedin.com/in/advait-patil-9146aba4/">linkedin</a> ·
+        <a href="https://x.com/AdvaitAPatil">twitter</a> ·
+        <a href="https://naturephotopoetry.wordpress.com/">photography/poetry</a> ·
+        <a href="mailto:advaitpatil64@gmail.com">email</a>
+      </dd>
+    </dl>
+
+    <footer>
+      <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2034256">
+        asteroid 34256 Advaitpatil is somewhere between Mars and Jupiter&nbsp;&#8599;
+      </a>
+    </footer>
+  </main>
+</body>
+</html>
