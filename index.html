@@ -13,6 +13,12 @@
   <meta property="og:description" content="AI and neurosurgery. Harvard Medical School, Quadrillion Labs, Stanford.">
   <meta property="og:url" content="https://advaitapatil.github.io/">
   <meta property="og:type" content="website">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Advait A. Patil">
+  <meta name="twitter:description" content="AI and neurosurgery. Harvard Medical School, Quadrillion Labs, Stanford.">
+  <meta name="twitter:image" content="https://advaitapatil.github.io/og.png">
 
   <!-- Google Analytics (GA4). Replace G-XXXXXXXXXX with your Measurement ID
        from analytics.google.com > Admin > Data Streams. -->
@@ -65,7 +71,7 @@
     }
 
     main {
-      max-width: 650px;
+      max-width: 660px;
       margin: 0 auto;
       padding: 88px 24px 48px;
       animation: fade 0.5s ease both;
@@ -93,23 +99,34 @@
       font-size: 12px;
       color: var(--muted);
       white-space: nowrap;
+      letter-spacing: 0.04em;
     }
 
     .intro {
       margin-top: 14px;
       color: var(--text-2);
       max-width: 90ch;
+      text-wrap: balance;
     }
 
     a {
       color: var(--accent);
       text-decoration: none;
+      background-image: linear-gradient(currentColor, currentColor);
+      background-size: 0% 1px;
+      background-repeat: no-repeat;
+      background-position: 0 100%;
+      transition: background-size 0.25s ease;
+      padding-bottom: 1px;
     }
-    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+    a:hover { background-size: 100% 1px; }
     a:focus-visible {
       outline: 2px solid var(--accent);
       outline-offset: 2px;
       border-radius: 2px;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      a { transition: none; }
     }
 
     dl {
@@ -124,6 +141,7 @@
       font-size: 12px;
       color: var(--muted);
       padding-top: 3px;
+      letter-spacing: 0.04em;
     }
     dd { color: var(--text); }
     dd p + p { margin-top: 6px; }
@@ -133,13 +151,70 @@
       margin-top: 48px;
       padding-top: 16px;
       border-top: 1px solid var(--rule);
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     footer a {
       font-family: var(--mono);
       font-size: 12px;
       color: var(--muted);
+      letter-spacing: 0.04em;
     }
     footer a:hover { color: var(--accent); }
+
+    .orbit {
+      position: relative;
+      width: 30px;
+      height: 18px;
+      flex: none;
+    }
+    .orbit-inner {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 28px;
+      height: 28px;
+      transform: translate(-50%, -50%) rotate(-18deg) scaleY(0.52);
+    }
+    .orbit-ring {
+      position: absolute;
+      inset: 0;
+      border: 1px solid var(--muted);
+      border-radius: 50%;
+    }
+    .orbit-arm {
+      position: absolute;
+      inset: 0;
+      animation: revolve 22s linear infinite;
+    }
+    .orbit-dot {
+      position: absolute;
+      top: -2.5px;
+      left: 50%;
+      width: 5px;
+      height: 5px;
+      margin-left: -2.5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .orbit-planet {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 7px;
+      height: 7px;
+      margin: -3.5px 0 0 -3.5px;
+      border-radius: 50%;
+      background: var(--text);
+    }
+    @keyframes revolve {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .orbit-arm { animation: none; transform: rotate(50deg); }
+    }
 
     @media (max-width: 560px) {
       main { padding: 56px 20px 40px; }
@@ -186,8 +261,8 @@
 
       <dt>formerly</dt>
       <dd class="quiet">
-        Stanford Medicine, NASA Astrobiology, MIT, UCSF.
-        U.S. Presidential Scholar, Science Talent Search finalist, RSI.
+        Stanford Medicine & Bioengineering, NASA, MIT, UCSF.
+        <br>U.S. Presidential Scholar, Science Talent Search finalist, RSI.
       </dd>
 
       <dt>elsewhere</dt>
@@ -195,12 +270,19 @@
         <a href="https://scholar.google.com/citations?user=dEsZgq0AAAAJ&amp;hl=en">publications</a> ·
         <a href="https://www.linkedin.com/in/advait-patil-9146aba4/">linkedin</a> ·
         <a href="https://x.com/AdvaitAPatil">twitter</a> ·
-        <a href="https://naturephotopoetry.wordpress.com/">photography/poetry</a> ·
+        <a href="https://naturephotopoetry.wordpress.com/">photography & poetry</a> ·
         <a href="mailto:advaitpatil64@gmail.com">email</a>
       </dd>
     </dl>
 
     <footer>
+      <span class="orbit" aria-hidden="true">
+        <span class="orbit-inner">
+          <span class="orbit-ring"></span>
+          <span class="orbit-planet"></span>
+          <span class="orbit-arm"><span class="orbit-dot"></span></span>
+        </span>
+      </span>
       <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2034256">
         asteroid 34256 Advaitpatil is somewhere between Mars and Jupiter&nbsp;&#8599;
       </a>
