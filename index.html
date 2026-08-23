@@ -4,24 +4,18 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Advait A. Patil</title>
-  <meta name="description" content="Advait A. Patil — MD candidate at Harvard Medical School, Head of Health and Life Sciences at Quadrillion Labs, Stanford CS/AI and Biology.">
+  <meta name="description" content="Advait A. Patil — MD candidate at Harvard Medical School and building Quadrillion. Previously computer science and AI at Stanford. Technology, neurosurgery, and improving the human condition.">
   <meta name="author" content="Advait A. Patil">
   <link rel="canonical" href="https://advaitapatil.github.io/">
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <meta property="og:title" content="Advait A. Patil">
-  <meta property="og:description" content="AI and neurosurgery. Harvard Medical School, Quadrillion Labs, Stanford.">
+  <meta property="og:description" content="MD candidate at Harvard Medical School and building Quadrillion. Technology, neurosurgery, and improving the human condition.">
   <meta property="og:url" content="https://advaitapatil.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Advait A. Patil">
-  <meta name="twitter:description" content="AI and neurosurgery. Harvard Medical School, Quadrillion Labs, Stanford.">
-  <meta name="twitter:image" content="https://advaitapatil.github.io/og.png">
+  <meta name="twitter:description" content="MD candidate at Harvard Medical School and building Quadrillion. Technology, neurosurgery, and improving the human condition.">
 
-  <!-- Google Analytics (GA4). Replace G-XXXXXXXXXX with your Measurement ID
-       from analytics.google.com > Admin > Data Streams. -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-394931802"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,51 +26,51 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #fcfcfa;
-      --text: #1a1a18;
-      --text-2: #5c5b55;
-      --muted: #8a897f;
-      --rule: #e4e3dc;
-      --accent: #2b5fa3;
+      --paper: #fbfaf8;
+      --ink: #1c1b17;
+      --ink-soft: #545149;
+      --ink-faint: #928e83;
+      --rule: #e6e3db;
       --serif: "Newsreader", Georgia, "Times New Roman", serif;
-      --mono: "IBM Plex Mono", "SF Mono", Menlo, Consolas, monospace;
-      --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg: #151513;
-        --text: #ecebe4;
-        --text-2: #a8a79d;
-        --muted: #77766c;
-        --rule: #2c2c28;
-        --accent: #7ba7dd;
+        --paper: #14130f;
+        --ink: #ece9e0;
+        --ink-soft: #a7a298;
+        --ink-faint: #6f6b61;
+        --rule: #2a2822;
       }
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { -webkit-text-size-adjust: 100%; }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: var(--sans);
-      font-size: 15px;
-      line-height: 1.6;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--serif);
+      font-size: 14px;
+      line-height: 1.62;
+      font-weight: 400;
       -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
     main {
-      max-width: 660px;
+      max-width: 42rem;
       margin: 0 auto;
-      padding: 88px 24px 48px;
-      animation: fade 0.5s ease both;
+      padding: 8vh 1.75rem 3rem;
+      animation: rise 0.7s cubic-bezier(0.2, 0.6, 0.2, 1) both;
     }
-    @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
     @media (prefers-reduced-motion: reduce) {
       main { animation: none; }
     }
@@ -85,149 +79,76 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
-      gap: 16px;
+      gap: 1.25rem;
+      padding-bottom: 1.1rem;
+      border-bottom: 1px solid var(--rule);
     }
     h1 {
-      font-family: var(--serif);
-      font-size: 34px;
+      font-size: 2.25rem;
       font-weight: 500;
-      letter-spacing: -0.01em;
-      line-height: 1.15;
+      letter-spacing: -0.018em;
+      line-height: 1.08;
     }
-    .loc {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
+    .place {
+      font-size: 0.82rem;
+      font-style: italic;
+      color: var(--ink-faint);
       white-space: nowrap;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.01em;
     }
 
-    .intro {
-      margin-top: 14px;
-      color: var(--text-2);
-      max-width: 90ch;
-      text-wrap: balance;
+    .lede {
+      margin-top: 1.35rem;
+      font-size: 1.12rem;
+      line-height: 1.58;
+      color: var(--ink);
+      text-wrap: pretty;
     }
+    .lede + .lede { margin-top: 0.9rem; }
 
     a {
-      color: var(--accent);
-      text-decoration: none;
-      background-image: linear-gradient(currentColor, currentColor);
-      background-size: 0% 1px;
-      background-repeat: no-repeat;
-      background-position: 0 100%;
-      transition: background-size 0.25s ease;
-      padding-bottom: 1px;
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--rule);
+      text-underline-offset: 0.16em;
+      text-decoration-thickness: 1px;
+      transition: text-decoration-color 0.25s ease, color 0.25s ease;
     }
-    a:hover { background-size: 100% 1px; }
+    a:hover { text-decoration-color: currentColor; }
     a:focus-visible {
-      outline: 2px solid var(--accent);
-      outline-offset: 2px;
-      border-radius: 2px;
+      outline: 2px solid var(--ink-soft);
+      outline-offset: 3px;
+      border-radius: 1px;
     }
-    @media (prefers-reduced-motion: reduce) {
-      a { transition: none; }
-    }
+    @media (prefers-reduced-motion: reduce) { a { transition: none; } }
 
-    dl {
-      margin-top: 44px;
-      display: grid;
-      grid-template-columns: 96px minmax(0, 1fr);
-      column-gap: 28px;
-      row-gap: 22px;
-    }
-    dt {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      padding-top: 3px;
-      letter-spacing: 0.04em;
-    }
-    dd { color: var(--text); }
-    dd p + p { margin-top: 6px; }
-    .quiet { color: var(--text-2); }
-
-    footer {
-      margin-top: 48px;
-      padding-top: 16px;
-      border-top: 1px solid var(--rule);
+    .links {
+      margin-top: 2.4rem;
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 0.45rem 1.6rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.01em;
     }
-    footer a {
-      font-family: var(--mono);
-      font-size: 12px;
-      color: var(--muted);
-      letter-spacing: 0.04em;
+    .links a {
+      color: var(--ink-soft);
+      text-decoration-color: transparent;
+      white-space: nowrap;
     }
-    footer a:hover { color: var(--accent); }
+    .links a:hover { color: var(--ink); text-decoration-color: currentColor; }
 
-    .orbit {
-      position: relative;
-      width: 30px;
-      height: 18px;
-      flex: none;
-    }
-    .orbit-inner {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 28px;
-      height: 28px;
-      transform: translate(-50%, -50%) rotate(-18deg) scaleY(0.52);
-    }
-    .orbit-ring {
-      position: absolute;
-      inset: 0;
-      border: 1px solid var(--muted);
-      border-radius: 50%;
-    }
-    .orbit-arm {
-      position: absolute;
-      inset: 0;
-      animation: revolve 22s linear infinite;
-    }
-    .orbit-dot {
-      position: absolute;
-      top: -2.5px;
-      left: 50%;
-      width: 5px;
-      height: 5px;
-      margin-left: -2.5px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
-    .orbit-planet {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      width: 7px;
-      height: 7px;
-      margin: -3.5px 0 0 -3.5px;
-      border-radius: 50%;
-      background: var(--text);
-    }
-    @keyframes revolve {
-      from { transform: rotate(0deg); }
-      to { transform: rotate(360deg); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .orbit-arm { animation: none; transform: rotate(50deg); }
-    }
-
-    @media (max-width: 560px) {
-      main { padding: 56px 20px 40px; }
-      h1 { font-size: 28px; }
-      header { flex-direction: column; gap: 4px; }
-      dl {
-        grid-template-columns: 1fr;
-        row-gap: 6px;
-        margin-top: 36px;
+    @media (max-width: 34rem) {
+      main { padding: 9vh 1.4rem 3rem; }
+      h1 { font-size: 1.9rem; }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.35rem;
       }
-      dt { padding-top: 0; }
-      dd { margin-bottom: 18px; }
-      dd:last-of-type { margin-bottom: 0; }
+      .links {
+        flex-direction: column;
+        gap: 0.7rem;
+      }
     }
   </style>
 </head>
@@ -235,58 +156,25 @@
   <main>
     <header>
       <h1>Advait A. Patil</h1>
-      <span class="loc">boston / nyc</span>
+      <span class="place">Boston &amp; New York</span>
     </header>
 
-    <p class="intro">
-      MD candidate at
-      <a href="https://hms.harvard.edu/">Harvard Medical School</a>, Head of
-      Health & Life Sciences at <a href="https://quadrillion.io/">Quadrillion</a>.
-      Previously CS/AI at Stanford. Working at the interface of AI and neurosurgery.
+    <p class="lede">
+      MD candidate at <a href="https://hms.harvard.edu/">Harvard Medical School</a>
+      and building <a href="https://quadrillion.ai/">Quadrillion</a>. I previously
+      studied Computer Science and AI at Stanford.
+    </p>
+    <p class="lede">
+      I care about technology, neurosurgery, and improving the human condition.
     </p>
 
-    <dl>
-      <dt>now</dt>
-      <dd>
-        <p>Building the future of autonomous research. Leading clinical ML from
-        code to deployment at Mass General Brigham Neurosurgery.</p>
-      </dd>
-
-      <dt>research</dt>
-      <dd>
-        <p>Intraoperative AI: real-time inference in the operating room.</p>
-        <p>Clinical LLM systems: multi-agent triage and automated quality review.</p>
-        <p>Spine and neuro-oncology outcomes: using ML to interrogate neurosurgical conditions.</p>
-      </dd>
-
-      <dt>formerly</dt>
-      <dd class="quiet">
-        Stanford Medicine & Bioengineering, NASA, MIT, UCSF.
-        <br>U.S. Presidential Scholar, Science Talent Search finalist, RSI.
-      </dd>
-
-      <dt>elsewhere</dt>
-      <dd>
-        <a href="https://scholar.google.com/citations?user=dEsZgq0AAAAJ&amp;hl=en">publications</a> ·
-        <a href="https://www.linkedin.com/in/advait-patil-9146aba4/">linkedin</a> ·
-        <a href="https://x.com/AdvaitAPatil">twitter</a> ·
-        <a href="https://naturephotopoetry.wordpress.com/">photography & poetry</a> ·
-        <a href="mailto:advaitpatil64@gmail.com">email</a>
-      </dd>
-    </dl>
-
-    <footer>
-      <span class="orbit" aria-hidden="true">
-        <span class="orbit-inner">
-          <span class="orbit-ring"></span>
-          <span class="orbit-planet"></span>
-          <span class="orbit-arm"><span class="orbit-dot"></span></span>
-        </span>
-      </span>
-      <a href="https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=2034256">
-        asteroid 34256 Advaitpatil is somewhere between Mars and Jupiter&nbsp;&#8599;
-      </a>
-    </footer>
+    <nav class="links" aria-label="Elsewhere">
+      <a href="https://scholar.google.com/citations?user=dEsZgq0AAAAJ&amp;hl=en">Publications</a>
+      <a href="https://www.linkedin.com/in/advait-patil-9146aba4/">LinkedIn</a>
+      <a href="https://x.com/AdvaitAPatil">X</a>
+      <a href="https://naturephotopoetry.wordpress.com/">Photography &amp; Poetry</a>
+      <a href="mailto:advaitpatil64@gmail.com">Email</a>
+    </nav>
   </main>
 </body>
 </html>
